@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/tan_background"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".IntroActivity">
+
+    <!-- Search category -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_search_blood">
+        <TextView
+            android:id="@+id/tview_search"
+            style="@style/CategoryStyleMenu"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/category_search" />
+        <Spinner
+            android:padding="32dp"
+            android:layout_gravity="end|center_vertical"
+            android:id="@+id/blood_search_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+    <!-- Request category -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_request">
+        <TextView
+            android:id="@+id/request"
+            style="@style/CategoryStyleMenu"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/category_request" />
+    </FrameLayout>
+
+    <!-- Request category -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_requests_list"        >
+        <TextView
+            android:id="@+id/see_requests"
+            style="@style/CategoryStyleMenu"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/category_see_request" />
+        <Spinner
+            android:padding="32dp"
+            android:layout_gravity="end|center_vertical"
+            android:id="@+id/request_spinner_blood_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+    </FrameLayout>
+
+
+    <!-- Donation category -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_my_account">
+        <TextView
+            android:id="@+id/donate"
+            style="@style/CategoryStyleMenu"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/category_create_user" />
+    </FrameLayout>
+
+
+    <!-- Help category -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/category_hospitals"
+        >
+        <TextView
+            android:id="@+id/main_hospitals"
+            style="@style/CategoryStyleMenu"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/category_hospital" />
+    </FrameLayout>
+
+    <!-- FAQ category -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/faq_primary">
+        <TextView
+            android:id="@+id/faq"
+            style="@style/CategoryStyleMenu"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/category_faq" />
+    </FrameLayout>
+
+    <!-- FAQ category -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#607260">
+        <TextView
+            android:id="@+id/admin"
+            style="@style/CategoryStyleMenu"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="@string/admin_contact" />
+    </FrameLayout>
+
+
+</LinearLayout>
+</ScrollView>

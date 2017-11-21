@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.github.utshaw.blooddonor_v3">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permisson.READ_GSERVICES"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+
+        <activity
+            android:name="io.github.utshaw.blooddonor_v3.IntroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="io.github.utshaw.blooddonor_v3.MainActivity">
+
+        </activity>
+
+
+        <activity
+            android:name="io.github.utshaw.blooddonor_v3.FAQActivity"
+            android:label="FAQ"
+            android:theme="@style/FAQTheme"
+            android:parentActivityName="io.github.utshaw.blooddonor_v3.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.github.utshaw.blooddonor_v3.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="io.github.utshaw.blooddonor_v3.hospitals.HospitalListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/HospitalTheme"
+            android:parentActivityName="io.github.utshaw.blooddonor_v3.MainActivity"
+            android:label="Nearby hopitals">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.github.utshaw.blooddonor_v3.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="io.github.utshaw.blooddonor_v3.CreateUserActivity"
+            android:label="Create User Account"
+            android:theme="@style/MyAccountTheme"
+            android:parentActivityName="io.github.utshaw.blooddonor_v3.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.github.utshaw.blooddonor_v3.MainActivity" />
+        </activity>
+
+        <activity
+            android:name="io.github.utshaw.blooddonor_v3.MyAccountActivity"
+            android:noHistory="true"
+            android:theme="@style/MyAccountTheme"
+            android:label="My Account"
+            android:parentActivityName="io.github.utshaw.blooddonor_v3.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.github.utshaw.blooddonor_v3.MainActivity" />
+        </activity>
+
+        <activity
+            android:label="Edit Your Account"
+            android:name="io.github.utshaw.blooddonor_v3.EditAccountActivity"
+            android:parentActivityName="io.github.utshaw.blooddonor_v3.MainActivity"
+            android:theme="@style/MyAccountTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="io.github.utshaw.blooddonor_v3.MainActivity" />
+        </activity>
+
+        <activity
+            android:label="Make a request"
+            android:parentActivityName="io.github.utshaw.blooddonor_v3.MainActivity"
+            android:name="io.github.utshaw.blooddonor_v3.RequestActivity">
+
+        </activity>
+
+
+        <activity
+            android:label="Submitted Request"
+            android:parentActivityName="io.github.utshaw.blooddonor_v3.MainActivity"
+            android:name="io.github.utshaw.blooddonor_v3.MyRequestActivity">
+        </activity>
+
+        <activity
+            android:noHistory="true"
+            android:name="io.github.utshaw.blooddonor_v3.use_request.UserRequestListActivity"
+            android:parentActivityName="io.github.utshaw.blooddonor_v3.MainActivity"
+            android:theme="@style/RequestListTheme">
+
+        </activity>
+
+        <activity
+            android:parentActivityName="io.github.utshaw.blooddonor_v3.MainActivity"
+            android:name="io.github.utshaw.blooddonor_v3.use_request.UserRequestDetails"
+            android:theme="@style/RequestListTheme">
+
+        </activity>
+
+        <activity
+            android:noHistory="true"
+            android:theme="@style/donorSearchTheme"
+            android:parentActivityName="io.github.utshaw.blooddonor_v3.MainActivity"
+            android:name= "io.github.utshaw.blooddonor_v3.DonorSearchActivity">
+
+        </activity>
+
+        <activity
+            android:name="io.github.utshaw.blooddonor_v3.UserDetails"
+            android:parentActivityName="io.github.utshaw.blooddonor_v3.MainActivity"
+            android:theme="@style/donorSearchTheme">
+        </activity>
+
+        <activity
+            android:name="io.github.utshaw.blooddonor_v3.LocationRefreshActivity"
+            android:label="My Location Info"
+            android:theme="@android:style/Theme.Holo.Light.Dialog">
+        </activity>
+
+        <activity
+            android:parentActivityName="io.github.utshaw.blooddonor_v3.MainActivity"
+            android:name="io.github.utshaw.blooddonor_v3.AdminActivity"
+            android:label="Admin">
+
+        </activity>
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service
+
+            android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+
+        <!-- Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_add_alert_white_24dp" />
+        <!-- Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more. -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+
+
+    </application>
+
+
+</manifest>

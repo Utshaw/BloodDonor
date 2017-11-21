@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_margin"
+    tools:context=".RequestActivity">
+
+    <!--ID Category-->
+    <LinearLayout
+        android:id="@+id/container_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Label -->
+        <TextView
+            android:text="@string/category_id"
+            style="@style/CategoryStyleEditor"
+            android:textStyle="bold"/>
+
+        <!-- ID VIEW-->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/edit_auth_mobile"
+                tools:text="+8801811563457"
+                style="@style/CategoryStyleMenu"
+                android:textColor="#000000"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingRight="16dp"
+                android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Overview category -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Label -->
+        <TextView
+            android:text="@string/category_overview"
+            style="@style/CategoryStyleEditor" />
+
+        <!-- Input fields -->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:paddingLeft="4dp"
+            android:orientation="vertical">
+
+            <!-- Name field -->
+            <EditText
+                android:id="@+id/request_name"
+                android:hint="@string/hint_name"
+                android:inputType="textCapWords"
+                style="@style/EditorFieldStyle" />
+
+            <!-- Mobile No. field -->
+            <EditText
+                android:inputType="phone"
+                android:id="@+id/request_mobile_no"
+                android:hint="@string/hint_mobile_no"
+                style="@style/EditorFieldStyle" />
+
+            <!-- Location. field -->
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/request_address"
+                android:hint="@string/hint_address"
+                android:editable="false"
+                android:visibility="gone"
+                android:inputType="textCapWords"
+                style="@style/EditorFieldStyle" />
+
+                <Button
+                    android:id="@+id/location_btn"
+                    android:visibility="visible"
+                    android:text="Select your location"
+                    android:onClick="addressClick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <!--<android.support.v7.widget.AppCompatCheckBox-->
+                <!--android:id="@+id/request_checkbox"-->
+                <!--android:text="Use current location"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content" />-->
+
+            <!--<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical">-->
+                <!--<RadioButton android:id="@+id/current_location"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Use current location"-->
+                    <!--android:onClick="onRadioButtonClicked"/>-->
+                <!--<RadioButton android:id="@+id/choose_location"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Choose Location"-->
+                    <!--android:onClick="onRadioButtonClicked"/>-->
+                <!--<RadioButton-->
+                    <!--android:id="@+id/let_me_type"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Let me type"-->
+                    <!--android:onClick="onRadioButtonClicked"/>-->
+            <!--</RadioGroup>-->
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Blood Group category -->
+
+    <LinearLayout
+        android:id="@+id/request_container_blood_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Label -->
+        <TextView
+            android:text="@string/category_blood_group"
+            style="@style/CategoryStyleEditor" />
+
+        <!-- Input field -->
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <!-- Gender drop-down spinner -->
+            <Spinner
+                android:id="@+id/request_spinner_blood_group"
+                android:layout_height="48dp"
+                android:layout_width="wrap_content"
+                android:paddingRight="16dp"
+                android:spinnerMode="dropdown"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

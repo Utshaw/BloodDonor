@@ -1,0 +1,107 @@
+<resources>
+    <!-- Title for the application. [CHAR LIMIT=12] -->
+    <string name="app_name">Blood Donor</string>
+
+    <!-- Category name for hospitals [CHAR LIMIT=20] -->
+    <string name="category_hospital">Nearby Hospitals!</string>
+
+    <!-- Category name for the vocabulary words for colors [CHAR LIMIT=20] -->
+    <string name="category_faq">FAQ</string>
+
+    <!-- Category name for search [CHAR LIMIT=20] -->
+    <string name="category_search">Search For Blood</string>
+
+    <!-- Category name for donation [CHAR LIMIT=20] -->
+    <string name="category_create_user">Be a Donor</string>
+
+
+    <string name="category_my_account">My Account</string>
+
+    <!-- Label for overview category of attributes in the editor [CHAR LIMIT=30] -->
+    <string name="category_overview">Overview</string>
+
+    <!-- Label for gender information in the editor [CHAR LIMIT=30] -->
+    <string name="category_gender">Gender</string>
+
+    <!-- Label for measurement information in the editor [CHAR LIMIT=30] -->
+    <string name="category_measurement">Measurement</string>
+
+    <!-- Text hint for name field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_name">Name</string>
+
+    <!-- Text hint for breed field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_mobile_no">Mobile No.</string>
+
+    <!-- Text hint for name field in the editor [CHAR LIMIT=30] -->
+    <string name="hint_weight">Weight</string>
+
+
+    <!-- Units for weight of the pet (kilograms) [CHAR LIMIT=5] -->
+    <string name="unit_weight">kg</string>
+    <string name="category_blood_group">Blood Group</string>
+
+    <!-- Label for dropdown menu option if the pet is male [CHAR LIMIT=20] -->
+    <string name="gender_male">Male</string>
+
+    <!-- Label for dropdown menu option if the pet is female [CHAR LIMIT=20] -->
+    <string name="gender_female">Female</string>
+
+    <!-- Label for editor menu option to save pet and leave editor [CHAR LIMIT=20] -->
+    <string name="action_edit">Save</string>
+
+    <!-- Label for editor overflow menu option that deletes the current pet [CHAR LIMIT=20] -->
+    <string name="action_delete">Delete Account</string>
+    <string name="hint_address">Address</string>
+    <string name="action_call">Call</string>
+    <string name="action_message">Send Message</string>
+    <string name="category_request">Request For Blood</string>
+    <string name="category_id">Your Account ID:</string>
+    <string name="action_sign_out">Sign Out</string>
+
+    <string name="users">users</string>
+
+    <string name="requests">requests</string>
+
+    <string name="category_see_request">Requests List</string>
+
+
+    <string name="faq_sign_in">I CAN\'T SEE MY ACCOUNT DETAILS IN \"My Account\" PORTION THOUGH I SIGNED IN PREVIOUSLY</string>
+    <string name="faa_sign_in">Make sure you have active internet connection while checking for your account details.If you can\'t find it then create a new account.</string>
+
+    <string name="faq_min_requirements">WHAT ARE THE MINIMUM REQUIREMENTS TO BECOME A BLOOD DONOR?</string>
+    <string name="faa_min_requirements">You must be at least 18 years of age, a minimum of 50 kgs, and in basic good health.</string>
+
+    <string name="faq_eat">IS THERE ANYTHING I SHOULD DO BEFORE I DONATE?</string>
+    <string name="faa_eat">Be sure to eat well at your regular mealtimes and drink plenty of fluids before and after donation.</string>
+
+    <string name="faq_allergy">I HAVE AN ALLERGY. CAN I DONATE?</string>
+    <string name="faa_allergy">Yes, if you have mild allergies you can donate blood, even when taking antihistamines for treatment. However, there are times when you may not be able to donate.
+You may not be able to donate if you have an allergy to a substance we use in the blood donation processhave a severe allergy, orare unwell at the time of donation due to your allergy.</string>
+
+
+    <string name="faq_anaemia">I’VE BEEN TOLD I HAVE ANAEMIA. CAN I DONATE BLOOD?</string>
+    <string name="faa_anaemia">If you have been diagnosed with low iron (with or without low haemoglobin) you can’t donate until it (and the low haemoglobin, if present) has been fully investigated, treated and corrected. This may include iron replacement therapy and/or dietary changes to increase iron intake.</string>
+
+    <string name="faq_alcohol">I HAD SEVERAL ALCOHOLIC DRINKS BEFORE GOING TO GIVE BLOOD. CAN I DONATE?</string>
+    <string name="faa_alcohol">No. You can\'t. This is because being intoxicated can affect your ability to understand and answer the donor questionnaire and declaration. It also affects your body’s ability to tolerate blood being taken.</string>
+
+    <string name="faq_baby">HOW LONG AFTER THE BIRTH OF MY BABY CAN I DONATE?</string>
+    <string name="faa_baby">At least nine months, or longer if the baby is still breast-feeding significantly at nine months. See also </string>
+
+    <string name="faq_wrong_blood">I HAVE CREATED AN ACCOUNT WITH WRONG BLOOD GROUP</string>
+    <string name="faa_wrong_blood">Just go to your account and edit that existing account with proper blood group.</string>
+
+    <string name="faq_delete">I HAVE DELETED MY ACCOUNT BUT IT STILL APPEARS IN SEARCH RESULTS</string>
+    <string name="faa_delete">Make sure you select proper blood group while logging to your account and you have active internet connection</string>
+
+    <string name="faq_request_delete">I WANT TO DELETE MY REQUEST AS I MANAGED BLOOD</string>
+    <string name="faa_request_delete">Login with your account and press delete button inside "Request For Blood" category.</string>
+
+    <string name="action_location">Location Check</string>
+    <string name="admin_contact">Admin</string>
+    <string name="admin_phone">01811563457</string>
+    <string name="admin_address">North Masdair,gabtoli,Nganj,\\n Bangladesh</string>
+    <string name="admin_email">farhan.tanvir.utshaw@gmail.com</string>
+
+
+</resources>

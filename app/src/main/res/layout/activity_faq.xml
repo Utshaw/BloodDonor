@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:layout_height="match_parent">
+
+    <!--Start-->
+    <TextView
+        android:text="@string/faq_wrong_blood"
+        android:textColor="@color/distance10plus"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="@string/faa_wrong_blood"
+        android:paddingTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--End-->
+    <!--Start-->
+    <TextView
+        android:paddingTop="16dp"
+        android:text="@string/faq_delete"
+        android:textColor="@color/distance10plus"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="@string/faa_delete"
+        android:paddingTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--End-->
+
+    <!--Start-->
+    <TextView
+        android:paddingTop="16dp"
+        android:text="@string/faq_sign_in"
+        android:textColor="@color/distance10plus"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="@string/faa_sign_in"
+        android:paddingTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--End-->
+
+
+    <!--First Start-->
+    <TextView
+        android:text="@string/faq_min_requirements"
+        android:textColor="@color/distance10plus"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="@string/faa_min_requirements"
+        android:paddingTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--First End-->
+
+    <!--Start-->
+    <TextView
+        android:paddingTop="16dp"
+        android:text="@string/faq_allergy"
+        android:textColor="@color/distance10plus"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="@string/faa_allergy"
+        android:paddingTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--End-->
+
+    <!--Start-->
+    <TextView
+        android:paddingTop="16dp"
+        android:text="@string/faq_eat"
+        android:textColor="@color/distance10plus"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="@string/faa_eat"
+        android:paddingTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--End-->
+
+    <!--Start-->
+    <TextView
+        android:paddingTop="16dp"
+        android:text="@string/faq_anaemia"
+        android:textColor="@color/distance10plus"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="@string/faa_anaemia"
+        android:paddingTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--End-->
+
+    <!--Start-->
+    <TextView
+        android:paddingTop="16dp"
+        android:text="@string/faq_baby"
+        android:textColor="@color/distance10plus"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="@string/faa_baby"
+        android:paddingTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--End-->
+
+    <!--Start-->
+    <TextView
+        android:paddingTop="16dp"
+        android:text="@string/faq_request_delete"
+        android:textColor="@color/distance10plus"
+        android:textStyle="bold"
+        android:textAppearance="?android:textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textAppearance="?android:textAppearanceMedium"
+        android:text="@string/faa_request_delete"
+        android:paddingTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!--End-->
+
+</LinearLayout>
+</ScrollView>

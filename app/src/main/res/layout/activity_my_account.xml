@@ -9,6 +9,34 @@
     android:padding="@dimen/activity_margin"
     tools:context=".MyAccountActivity">
 
+
+    <!--ID Category-->
+    <LinearLayout
+        android:paddingTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Label -->
+        <TextView
+            android:textColor="@color/colorAccent"
+            android:fontFamily="sans-serif"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account ID:    "/>
+
+        <TextView
+            android:id="@+id/detail_acc_id"
+            android:fontFamily="sans-serif"
+            android:textAppearance="?android:textAppearanceMedium"
+            tools:text="+8801811563457"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+    </LinearLayout>
+
     <!-- Overview category -->
     <LinearLayout
         android:paddingTop="16dp"

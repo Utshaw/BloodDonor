@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentSender;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
@@ -12,6 +13,7 @@ import android.net.ConnectivityManager;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
@@ -107,6 +109,23 @@ public class IntroActivity extends FragmentActivity implements
         }
 
     }
+    private void chooseNextActivity(){
+        //  Initialize SharedPreferences
+        SharedPreferences getPrefs = getSharedPreferences("first", Context.MODE_PRIVATE);
+
+        //  Create a new boolean and preference and set it to true
+        boolean isFirstStart = getPrefs.getBoolean("first", true);
+
+        //  If the activity has never started before...
+        if (isFirstStart) {
+            //  Launch app intro
+            startActivity(new Intent(IntroActivity.this, appIntro.class));
+
+        }else{
+            startActivity(new Intent(IntroActivity.this,MainActivity.class).addFlags(FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_CLEAR_TOP | FLAG_ACTIVITY_RESET_TASK_IF_NEEDED));
+        }
+        finish();
+    }
 
     private void showDialogInternet() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(
@@ -185,6 +204,9 @@ public class IntroActivity extends FragmentActivity implements
         Logger.d("onStart()");
     }
 
+
+
+
     private void handleNewLocation(Location location) {
 
         double currentLatitude = location.getLatitude();
@@ -197,8 +219,9 @@ public class IntroActivity extends FragmentActivity implements
 
 
 
-        startActivity(new Intent(IntroActivity.this,MainActivity.class).addFlags(FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_CLEAR_TOP | FLAG_ACTIVITY_RESET_TASK_IF_NEEDED));
-        finish();
+        chooseNextActivity();
+//        startActivity(new Intent(IntroActivity.this,MainActivity.class).addFlags(FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_CLEAR_TOP | FLAG_ACTIVITY_RESET_TASK_IF_NEEDED));
+//        finish();
 
         if(mGoogleApiClient.isConnected()){
             mGoogleApiClient.disconnect();
@@ -275,7 +298,8 @@ public class IntroActivity extends FragmentActivity implements
         try {
             LocationServices.FusedLocationApi.removeLocationUpdates(mGoogleApiClient, this);
         }catch (IllegalStateException e){
-            startActivity(new Intent(IntroActivity.this,MainActivity.class).addFlags(FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_CLEAR_TOP | FLAG_ACTIVITY_RESET_TASK_IF_NEEDED));
+            chooseNextActivity();
+//            startActivity(new Intent(IntroActivity.this,MainActivity.class).addFlags(FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_CLEAR_TOP | FLAG_ACTIVITY_RESET_TASK_IF_NEEDED));
 
         }
     }
@@ -338,7 +362,8 @@ public class IntroActivity extends FragmentActivity implements
                     if(UserLocationInfo.isValueSet()){
                         if(mGoogleApiClient.isConnected()){
                             mGoogleApiClient.disconnect();
-                            startActivity(new Intent(IntroActivity.this,MainActivity.class).addFlags(FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_CLEAR_TOP | FLAG_ACTIVITY_RESET_TASK_IF_NEEDED));
+                            chooseNextActivity();
+//                            startActivity(new Intent(IntroActivity.this,MainActivity.class).addFlags(FLAG_ACTIVITY_NEW_TASK | FLAG_ACTIVITY_CLEAR_TOP | FLAG_ACTIVITY_RESET_TASK_IF_NEEDED));
                             finish();
                         }
                         else{

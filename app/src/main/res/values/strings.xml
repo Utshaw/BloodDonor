@@ -94,7 +94,7 @@ You may not be able to donate if you have an allergy to a substance we use in th
     <string name="faq_delete">I HAVE DELETED MY ACCOUNT BUT IT STILL APPEARS IN SEARCH RESULTS</string>
     <string name="faa_delete">Make sure you select proper blood group while logging to your account and you have active internet connection</string>
 
-    <string name="faq_request_delete">I WANT TO DELETE MY REQUEST AS I MANAGED BLOOD</string>
+    <string name="faq_request_delete">I WANT TO DELETE MY REQUEST AS I HAVE MANAGED BLOOD</string>
     <string name="faa_request_delete">Login with your account and press delete button inside "Request For Blood" category.</string>
 
     <string name="action_location">Location Check</string>
@@ -102,6 +102,9 @@ You may not be able to donate if you have an allergy to a substance we use in th
     <string name="admin_phone">01811563457</string>
     <string name="admin_address">North Masdair,gabtoli,Nganj,\\n Bangladesh</string>
     <string name="admin_email">farhan.tanvir.utshaw@gmail.com</string>
+
+    <string name="sign_out">Sign Out</string>
+    <string name="send_button_label">Send</string>
 
 
 </resources>

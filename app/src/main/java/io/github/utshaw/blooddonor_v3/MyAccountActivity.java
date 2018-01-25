@@ -55,6 +55,8 @@ public class MyAccountActivity extends AppCompatActivity {
         mUser = (User) getIntent().getSerializableExtra("userObject");
         authNumber = getIntent().getStringExtra("phoneNumber");
 
+        ((TextView)(findViewById(R.id.detail_acc_id))).setText(authNumber);
+
         nameTextView.setText(mUser.getmUsername());
         bloodTextView.setText(mUser.getmBloodGroup());
         bloodGroup = mUser.getmBloodGroup();

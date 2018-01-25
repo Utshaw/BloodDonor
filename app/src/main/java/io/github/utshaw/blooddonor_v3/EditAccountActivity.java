@@ -336,8 +336,8 @@ public class EditAccountActivity extends AppCompatActivity {
                         mDatabaseReference.child("users").child(accBlood).child(mAuthMobileNo).setValue(user);
                         mDatabaseReference.child("users").child(previousBloodGroup).child(mAuthMobileNo).removeValue();
 
-                        mDatabaseReference.child("user_tokens").child(accBlood).child(mAuthMobileNo).removeValue();
-                        mDatabaseReference.child("user_tokens").child(accBlood).child(mAuthMobileNo).setValue(refreshedToken);
+                        mDatabaseReference.child("user_tokens").child(previousBloodGroup).child(mAuthMobileNo).removeValue();
+//                        mDatabaseReference.child("user_tokens").child(accBlood).child(mAuthMobileNo).setValue(refreshedToken);
 
                         Toast.makeText(this, "Warning! Blood group changed", Toast.LENGTH_SHORT).show();
                     }

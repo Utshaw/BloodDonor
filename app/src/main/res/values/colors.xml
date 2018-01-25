@@ -72,6 +72,17 @@
     <color name="unable_donor">@color/distance9</color>
 
 
+    <color name="green1">#4caf50</color>
+    <color name="amber9">#ffa000</color>
+    <color name="amber10">#ff8f00</color>
+    <color name="amber11">#ff6f00</color>
+    <color name="blue1">#2196f3</color>
+    <color name="Red1">#f44336</color>
+    <color name="purple1">#9c27b0</color>
+    <color name="purple15">#aa00ff</color>
+
+
+
 
 
 </resources>

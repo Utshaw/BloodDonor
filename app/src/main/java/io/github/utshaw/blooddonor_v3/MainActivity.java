@@ -29,6 +29,7 @@ import com.orhanobut.logger.Logger;
 
 import java.util.Arrays;
 
+import io.github.utshaw.blooddonor_v3.chat.ChatActivity;
 import io.github.utshaw.blooddonor_v3.hospitals.HospitalListActivity;
 import io.github.utshaw.blooddonor_v3.use_request.UserRequest;
 import io.github.utshaw.blooddonor_v3.use_request.UserRequestListActivity;
@@ -458,6 +459,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_main_location:
                 startActivity(new Intent(MainActivity.this,LocationRefreshActivity.class));
                 break;
+            case R.id.action_main_chat:
+                    startActivity(new Intent(MainActivity.this, ChatActivity.class));
+//                Toast.makeText(this, "Just chat!!", Toast.LENGTH_SHORT).show();
 
         }
         return super.onOptionsItemSelected(item);

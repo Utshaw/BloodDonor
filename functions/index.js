@@ -51,11 +51,29 @@ exports.sendNotification = functions.database.ref('/requests/{blood_group}/{phon
 
 
     var blood_group = event.params.blood_group;
-    var requester_phone = event.params.phone_number;
+    var requester_auth_phone = event.params.phone_number;
+
+    var requester_phone = 012;
+
+    var obj = {
+        NUMBER: 01222222222,
+    }
+
+    const requester_phone_ref = admin.database().ref('requests/' + blood_group + '/' + requester_auth_phone );
+    requester_phone_ref.once('value')
+    .then(function(snapshot) {
+        console.log("SNAPSHOT: " + snapshot.key);
+        requester_phone = snapshot.child("mPhoneNumber").val();
+        console.log("Phone Of requester inside : " + requester_phone);
+        obj.NUMBER = requester_phone;
+        console.log("Object Phone number of  requester inside : " , obj.NUMBER);
+      });
+    console.log("Phone Of requester outside : " + requester_phone);
+    console.log("Object Phone number of  requester outside : " , obj.NUMBER);
 
 
     console.log("Blood Group: " + blood_group);
-    console.log("Phone number " + requester_phone);
+    console.log("Phone number " + requester_auth_phone);
 
 
 
@@ -96,8 +114,9 @@ exports.sendNotification = functions.database.ref('/requests/{blood_group}/{phon
                             const payload = {
                                 notification: {
                                     title:"New request for " + blood_group + " blood!",
-                                    body: "Request from " + requester_phone,
+                                    body: "Request from " + requester_auth_phone,
                                     sound: "default",
+                                    name: "KOPA"
                                     // click_action: "io.github.utshaw.blooddonor_v3.FAQActivity"
                                 },
                             };

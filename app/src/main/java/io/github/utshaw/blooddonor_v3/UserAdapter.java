@@ -38,8 +38,7 @@ public class UserAdapter extends ArrayAdapter<User> {
         User currentUser = getItem(position);
 
         if(!currentUser.isActiveDonor()){
-            View emptyView = ((Activity) getContext()).getLayoutInflater().inflate(R.layout.list_item, parent, false);
-            emptyView.setVisibility(View.GONE);
+            View emptyView = ((Activity) getContext()).getLayoutInflater().inflate(R.layout.empty_row, parent, false);
             return emptyView;
         }
         if(convertView == null){

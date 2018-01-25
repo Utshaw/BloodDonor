@@ -2,6 +2,8 @@ package io.github.utshaw.blooddonor_v3;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -9,6 +11,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -23,6 +26,10 @@ import com.google.android.gms.location.LocationListener;
 import com.google.android.gms.maps.GoogleMap;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
 
 /**
  * Created by Utshaw on 9/29/2017.
@@ -118,8 +125,9 @@ public class LocationRefreshActivity extends FragmentActivity implements
     @Override
     public void onLocationChanged(Location location) {
         lastLocation = location;
-        txtOutput.setText("Lat: " + Double.toString(location.getLatitude()) +
-        "\nLong: " +   Double.toString(location.getLongitude()));
+//        txtOutput.setText("Lat: " + Double.toString(location.getLatitude()) +
+//        "\nLong: " +   Double.toString(location.getLongitude()));
+        txtOutput.setText(getAddress(location.getLatitude(),location.getLongitude()));
         UserLocationInfo.setUserLatitude(location.getLatitude());
         UserLocationInfo.setUserLongitude(location.getLongitude());
         if(mGoogleApiClient != null){
@@ -128,6 +136,35 @@ public class LocationRefreshActivity extends FragmentActivity implements
         progressBar.setVisibility(ProgressBar.INVISIBLE);
     }
 
+    public String getAddress(double lat, double lng) {
+        Geocoder geocoder = new Geocoder(LocationRefreshActivity.this, Locale.getDefault());
+        String add = "";
+        try {
+            List<Address> addresses = geocoder.getFromLocation(lat, lng, 1);
+            Address obj = addresses.get(0);
+            add = obj.getAddressLine(0);
+            Log.v("IGA", "Address" + add);
+            return add;
+//            add = add + "\n" + obj.getCountryName();
+//            add = add + "\n" + obj.getCountryCode();
+//            add = add + "\n" + obj.getAdminArea();
+//            add = add + "\n" + obj.getPostalCode();
+//            add = add + "\n" + obj.getSubAdminArea();
+//            add = add + "\n" + obj.getLocality();
+//            add = add + "\n" + obj.getSubThoroughfare();
+
+
+            // Toast.makeText(this, "Address=>" + add,
+            // Toast.LENGTH_SHORT).show();
+
+            // TennisAppActivity.showDialog(add);
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+        return add;
+    }
 
 
 

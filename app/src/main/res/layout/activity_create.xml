@@ -208,7 +208,7 @@
 
         <!-- Label -->
         <TextView
-            android:text="Date"
+            android:text="Last Blood Donation"
             style="@style/CategoryStyleEditor" />
 
         <!-- Input fields -->

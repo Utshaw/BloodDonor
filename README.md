@@ -8,6 +8,9 @@ Blood Donor lets you connect with other donor and requester easily & much more.
 |Easy start| Auto Notification | Account at your control |
 
 
+| ![](https://user-images.githubusercontent.com/18516336/43191082-4313ab58-901c-11e8-9f9f-6762ddaae5c8.jpg) | ![](https://user-images.githubusercontent.com/18516336/43191257-a0b8c7ac-901c-11e8-974c-037f4c986f52.jpg)
+|:---:|:---:|
+|Community Chat| Find nearby hospitals easily!|
 
 ## Getting Started
 
